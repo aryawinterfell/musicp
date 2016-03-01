@@ -1,1 +1,12 @@
 <h1>This will be home to an interative practice Log</h1>
+
+<% @logs.each do |log| %>
+	<div>
+	<h1><%= log.piece %></h1>
+	<p><%= log.date %></p>
+	<p><%= log.time %><p>
+	<p><%= log.observations %></p>
+	</div>
+
+<hr />
+<% end %>
