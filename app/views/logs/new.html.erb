@@ -1,0 +1,21 @@
+<h1>What have you been Practicing?</h1>
+<%= simple_form_for @log do |f| %>
+	<%= f.input :piece %>
+	<%= f.input :date %>
+	<%= f.input :time %>
+	<%= f.input :observations %>
+	<%= f.button :submit %>
+	<% end %>
+</div>
+
+
+<% @logs.each do |log| %>
+<div class="booyah-box col-xs-10 col-xs-offset-1">
+	<h1><%= log.piece %></h1>
+	<p>Date: <%= log.date %></p>
+	<p>Time <%= log.time %><p>
+	<p>Observations <%= log.observations %></p>
+	</div>
+
+<hr />
+<% end %>

@@ -1,5 +1,7 @@
 Musicp::Application.routes.draw do
   root 'logs#index'
+
+  resources :logs
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
