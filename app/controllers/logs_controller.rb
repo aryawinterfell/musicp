@@ -7,5 +7,18 @@ class LogsController < ApplicationController
 		@logs = Log.all
 		@log = Log.new
 	end
+
+	def create
+		Log.create(place_params)
+		redirect_to new_log_path
+	end
+
+	private
+
+	def place_params
+		params.require(:log).permit(:piece, :date, :time, :observations)
+	end
+
 end
+
 
