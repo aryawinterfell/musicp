@@ -9,13 +9,13 @@ class LogsController < ApplicationController
 	end
 
 	def create
-		Log.create(place_params)
+		Log.create(log_params)
 		redirect_to new_log_path
 	end
 
 	private
 
-	def place_params
+	def log_params
 		params.require(:log).permit(:piece, :date, :time, :observations)
 	end
 
